@@ -6,11 +6,11 @@ public class MountainArray {
 
         int[] arr = {1, 3, 4, 5, 6, 8, 5, 4, 3, 1, 0};
 
-        System.out.println(search(arr));
+        System.out.println(peakIndexInMountainArray(arr));
 
     }
 
-    public static int search(int[] arr) {
+    public static int peakIndexInMountainArray(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
 

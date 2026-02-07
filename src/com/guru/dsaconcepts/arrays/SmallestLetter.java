@@ -8,10 +8,10 @@ public class SmallestLetter {
         char[] letters = {'c', 'f', 'j'};
         char target = 'c';
 
-        System.out.println(search(letters, target));
+        System.out.println(searchLetter(letters, target));
     }
 
-    public static char search(char[] letters, char target) {
+    public static char searchLetter(char[] letters, char target) {
 
         int start = 0;
         int end = letters.length - 1;

@@ -1,58 +1,21 @@
 package com.guru.dsaconcepts.arrays;
 
-public class SearchInRotatedSortedArray {
-
+public class RotationCount {
     public static void main(String[] args) {
+//        int[] arr = {1, 3, 4, 5, 6, 7, 8, 9};
+        int[] arr = {7, 8, 9, 1, 3, 4, 5, 6};
 
-        int[] arr = {4, 5, 6, 8, 10, 12, 1, 2, 3};
-        int target = 6;
-
-//        System.out.println(findPivot(arr));
-        System.out.println(findAns(arr, target));
+        System.out.println(countRotations(arr));
     }
 
-    private static int findAns(int[] arr, int target) {
-        int pivot = findPivot(arr); // 5
+    private static int countRotations(int[] arr) {
+        int pivot = findPivot(arr);
 
-        // If you did not find pivot, it means array is not rotated
-        if(pivot == -1) {
-            // So just do normal BS
-            return binarySearch(arr, target, 0, arr.length - 1);
-        }
+//        if(pivot == -1) {
+//            return 0;
+//        }
 
-        if(arr[pivot] == target) {
-            return pivot;
-        }
-
-        if(arr[0] <= target) {
-            return binarySearch(arr, target, 0, pivot);
-        }
-        else {
-            return binarySearch(arr, target, pivot + 1, arr.length - 1);
-        }
-    }
-
-    public static int binarySearch(int[] arr, int target, int start, int end) {
-
-        while(start <= end) {
-
-            // Find middle element
-//            int mid = (start + end) / 2; // might be possible that (start + end) exceeds the range of int in java
-            int mid = start + (end - start) / 2;
-
-            if(target < arr[mid]) {
-                end = mid - 1;
-            }
-            else if(target > arr[mid]) {
-                start = mid + 1;
-            }
-            else {
-                // fond ans, that is mid
-                return mid;
-            }
-
-        }
-        return -1;
+        return pivot + 1;
     }
 
     // This will not work in duplicate values

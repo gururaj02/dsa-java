@@ -24,6 +24,12 @@ public class PatternsPrinting {
         System.out.println();
         pattern7(4);
 
+        System.out.println();
+        pattern8(4);
+
+        System.out.println();
+        pattern9(4);
+
     }
 
     public static void pattern1(int n) {
@@ -119,6 +125,44 @@ public class PatternsPrinting {
             for(int col = 2; col <= row; col++) {
                 System.out.print(col + " ");
             }
+            System.out.println();
+        }
+    }
+
+    public static void pattern8(int n) {
+
+        for(int row = 1; row <= 2 * n - 1; row++) {
+
+            int totalRow = row > n ? 2 * n - row : row;
+
+            for(int spaces = 0; spaces < n - totalRow; spaces++) {
+                System.out.print("  ");
+            }
+
+            for(int col = totalRow; col >= 1; col--) {
+                System.out.print(col + " ");
+            }
+
+            for(int col = 2; col <= totalRow; col++) {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void pattern9(int n) {
+
+        int originalN = n;
+        n = 2 * n;
+
+        for(int row = 1; row < n ; row++) {
+
+            for(int col = 1; col < n; col++) {
+                int atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - row, n - col));
+
+                System.out.print(atEveryIndex + " ");
+            }
+
             System.out.println();
         }
     }

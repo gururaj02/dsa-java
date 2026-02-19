@@ -158,7 +158,7 @@ public class PatternsPrinting {
         for(int row = 0; row <= n ; row++) {
 
             for(int col = 0; col <= n; col++) {
-                int atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - row, n - col));
+                int atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - row, n - col)); // you can add 1 to remove 0 at the center
 
                 System.out.print(atEveryIndex + " ");
             }

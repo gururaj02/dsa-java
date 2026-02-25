@@ -7,7 +7,7 @@ public class MoresVotingAlgorithm {
 
     public static void main(String[] args) {
 
-        int[] nums = {3, 2, 3};
+        int[] nums = {5,5,1,1,1,5,5};
         System.out.println(majorityElement(nums));
 
         // Using HasMap

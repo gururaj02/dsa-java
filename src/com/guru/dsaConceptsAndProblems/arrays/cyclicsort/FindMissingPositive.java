@@ -4,7 +4,7 @@ public class FindMissingPositive {
 
     public static void main(String[] args) {
 
-        int[] arr = {2};
+        int[] arr = {1, 2, 4, 5};
 
         System.out.println(cyclic(arr));
     }

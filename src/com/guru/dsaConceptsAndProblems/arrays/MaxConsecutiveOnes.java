@@ -3,7 +3,7 @@ package com.guru.dsaConceptsAndProblems.arrays;
 class MaxConsecutiveOnes {
 
     public static void main(String[] args) {
-        int[] nums = {1,1,0,1,1,1,0,1};
+        int[] nums = {1,1,0,1,1,1};
 
         System.out.println(findMaxConsecutiveOnes1(nums));
     }

@@ -14,5 +14,23 @@ public class Main {
         list.insert(100, 3);
 
         list.display();
+        System.out.println("Size : " + list.getSize());
+
+        System.out.println(list.deleteFirst());
+
+        list.display();
+        System.out.println("Size : " + list.getSize());
+
+        System.out.println(list.deleteLast());
+
+        list.display();
+        System.out.println("Size : " + list.getSize());
+
+        System.out.println(list.delete(2));
+
+        list.display();
+        System.out.println("Size : " + list.getSize());
+
+        System.out.println(list.find(3));
     }
 }

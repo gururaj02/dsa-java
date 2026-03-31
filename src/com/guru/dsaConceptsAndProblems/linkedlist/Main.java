@@ -33,6 +33,7 @@ public class Main {
 //
 //        System.out.println(list.find(3));
 
+
         DoublyLinkedList list = new DoublyLinkedList();
 
         list.insertFirst(3);

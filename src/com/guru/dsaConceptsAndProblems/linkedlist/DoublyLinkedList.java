@@ -34,6 +34,9 @@ public class DoublyLinkedList {
         node.prev = last;
     }
 
+    // TODO : Delete First
+    // TODO : Delete Last
+
     public void display() {
         Node node = head;
         Node last = null;

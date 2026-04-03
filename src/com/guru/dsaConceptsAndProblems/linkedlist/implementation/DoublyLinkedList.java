@@ -1,4 +1,4 @@
-package com.guru.dsaConceptsAndProblems.linkedlist;
+package com.guru.dsaConceptsAndProblems.linkedlist.implementation;
 
 public class DoublyLinkedList {
 

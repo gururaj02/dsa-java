@@ -51,7 +51,6 @@ public class DoublyLinkedList {
         }
     }
 
-    // TODO : Delete First
     // TODO : Delete Last
     // TODO : Delete At Particular index
 
@@ -72,6 +71,24 @@ public class DoublyLinkedList {
 
         return val;
     }
+
+//    public int deleteLast() {
+//        if (head == null) {
+//            throw new RuntimeException("List is empty");
+//        }
+//
+//        Node last = head;
+//
+//        // Case: only one element
+//        if (head.next == null) {
+//            head = null;
+//        } else {
+//            head = head.next;
+//            head.prev = null;
+//        }
+//
+//        return val;
+//    }
 
     public Node find(int value) {
         Node node = head;

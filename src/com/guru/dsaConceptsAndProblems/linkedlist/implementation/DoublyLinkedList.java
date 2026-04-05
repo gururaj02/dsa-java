@@ -55,6 +55,24 @@ public class DoublyLinkedList {
     // TODO : Delete Last
     // TODO : Delete At Particular index
 
+    public int deleteFirst() {
+        if (head == null) {
+            throw new RuntimeException("List is empty");
+        }
+
+        int val = head.value;
+
+        // Case: only one element
+        if (head.next == null) {
+            head = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+        }
+
+        return val;
+    }
+
     public Node find(int value) {
         Node node = head;
 

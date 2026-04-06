@@ -51,7 +51,6 @@ public class DoublyLinkedList {
         }
     }
 
-    // TODO : Delete Last
     // TODO : Delete At Particular index
 
     public int deleteFirst() {

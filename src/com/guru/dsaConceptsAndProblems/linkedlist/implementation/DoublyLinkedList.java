@@ -97,6 +97,47 @@ public class DoublyLinkedList {
         return val;
     }
 
+    public int delete(int item) {
+        if (head == null) {
+            throw new RuntimeException("List is empty");
+        }
+
+        Node node = head;
+
+        // Find the node
+        while (node != null && node.value != item) {
+            node = node.next;
+        }
+
+        // Item not found
+        if (node == null) {
+            throw new RuntimeException("Item not found");
+        }
+
+        int val = node.value;
+
+        // Case 1: Deleting head
+        if (node == head) {
+            head = head.next;
+            if (head != null) {
+                head.prev = null;
+            }
+            return val;
+        }
+
+        // Case 2: Deleting last node
+        if (node.next == null) {
+            node.prev.next = null;
+            return val;
+        }
+
+        // Case 3: Middle node
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+
+        return val;
+    }
+
     public Node find(int value) {
         Node node = head;
 

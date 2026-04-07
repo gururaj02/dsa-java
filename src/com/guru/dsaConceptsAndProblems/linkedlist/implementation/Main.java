@@ -48,6 +48,8 @@ public class Main {
         list.display();
         System.out.println(list.deleteLast());
         list.display();
+        System.out.println(list.delete(3));
+        list.display();
 
 
 //        CircularLinkedList list = new CircularLinkedList();

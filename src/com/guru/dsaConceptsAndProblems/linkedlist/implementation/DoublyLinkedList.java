@@ -50,9 +50,7 @@ public class DoublyLinkedList {
             node.next.prev = node;
         }
     }
-
-    // TODO : Delete At Particular index
-
+    
     public int deleteFirst() {
         if (head == null) {
             throw new RuntimeException("List is empty");

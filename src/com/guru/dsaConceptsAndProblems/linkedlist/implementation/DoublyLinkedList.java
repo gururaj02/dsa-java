@@ -161,6 +161,10 @@ public class DoublyLinkedList {
         return null;
     }
 
+    public int getSize() {
+        return size;
+    }
+
     public void display() {
         Node node = head;
         Node last = null;

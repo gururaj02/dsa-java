@@ -44,12 +44,16 @@ public class Main {
         list.insert(99, 65);
 
         list.display();
-        System.out.println(list.deleteFirst());
+        System.out.println("Size is : " + list.getSize());
+        System.out.println("Deleted First : " + list.deleteFirst());
         list.display();
-        System.out.println(list.deleteLast());
+        System.out.println("Size is : " + list.getSize());
+        System.out.println("Deleted Last : " + list.deleteLast());
         list.display();
-        System.out.println(list.delete(3));
+        System.out.println("Size is : " + list.getSize());
+        System.out.println("Deleted Element : " + list.delete(3));
         list.display();
+        System.out.println("Size is : " + list.getSize());
 
 
 //        CircularLinkedList list = new CircularLinkedList();

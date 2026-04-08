@@ -3,6 +3,7 @@ package com.guru.dsaConceptsAndProblems.linkedlist.implementation;
 public class DoublyLinkedList {
 
     private Node head;
+    private int size;
 
     public void insertFirst(int val) {
         Node node = new Node(val);
@@ -12,6 +13,8 @@ public class DoublyLinkedList {
             head.prev = node;
         }
         head = node;
+
+        size++;
     }
 
     public void insertLast(int val) {
@@ -32,6 +35,8 @@ public class DoublyLinkedList {
 
         last.next = node;
         node.prev = last;
+
+        size++;
     }
 
     public void insert(int after, int val) {
@@ -49,6 +54,8 @@ public class DoublyLinkedList {
         if(node.next != null) {
             node.next.prev = node;
         }
+
+        size++;
     }
     
     public int deleteFirst() {
@@ -65,6 +72,8 @@ public class DoublyLinkedList {
             head = head.next;
             head.prev = null;
         }
+
+        size--;
 
         return val;
     }
@@ -91,6 +100,8 @@ public class DoublyLinkedList {
         int val = node.next.value;
         node.next.prev = null;
         node.next = null;
+
+        size--;
 
         return val;
     }
@@ -132,6 +143,8 @@ public class DoublyLinkedList {
         // Case 3: Middle node
         node.prev.next = node.next;
         node.next.prev = node.prev;
+
+        size--;
 
         return val;
     }

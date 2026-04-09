@@ -149,6 +149,8 @@ public class DoublyLinkedList {
         return val;
     }
 
+    // TODO: tyr to delete by index
+
     public Node find(int value) {
         Node node = head;
 

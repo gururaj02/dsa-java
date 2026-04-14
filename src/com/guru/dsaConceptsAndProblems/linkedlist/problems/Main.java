@@ -17,17 +17,34 @@ public class Main {
 //        list.display();
 
         // Q-2
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.insertLast(1);
-        list.insertLast(1);
-        list.insertLast(2);
-        list.insertLast(3);
-        list.insertLast(3);
-        list.insertLast(3);
-        list.display();
+//        SinglyLinkedList list = new SinglyLinkedList();
+//        list.insertLast(1);
+//        list.insertLast(1);
+//        list.insertLast(2);
+//        list.insertLast(3);
+//        list.insertLast(3);
+//        list.insertLast(3);
+//        list.display();
+//
+//        list.removeDuplicates();
+//        list.display();
 
-        list.removeDuplicates();
-        list.display();
+        // Q-3
+        SinglyLinkedList first = new SinglyLinkedList();
+        first.insertLast(1);
+        first.insertLast(3);
+        first.insertLast(5);
+        first.display();
+
+        SinglyLinkedList second = new SinglyLinkedList();
+        second.insertLast(1);
+        second.insertLast(2);
+        second.insertLast(9);
+        second.insertLast(14);
+        second.display();
+
+        SinglyLinkedList ans = SinglyLinkedList.merge(first, second);
+        ans.display();
 
 
     }

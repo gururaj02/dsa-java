@@ -106,7 +106,20 @@ public class CycleQuestions {
         return false;
     }
 
-    // TODO: Middle of the LL
+    // Middle of the LL
+    // https://leetcode.com/problems/middle-of-the-linked-list/
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
+
 
     private int findSquare(int number) {
         int ans = 0;

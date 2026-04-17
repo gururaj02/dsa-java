@@ -106,6 +106,8 @@ public class CycleQuestions {
         return false;
     }
 
+    // TODO: Middle of the LL
+
     private int findSquare(int number) {
         int ans = 0;
 

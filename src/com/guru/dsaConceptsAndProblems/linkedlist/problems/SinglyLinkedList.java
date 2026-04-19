@@ -156,6 +156,7 @@ public class SinglyLinkedList {
 
     // Q1 : Recursive insertion in linked list
     public void insertRec(int val, int index) {
+        // head is the last thing returned
         head = insertRec(val, index, head);
     }
 
@@ -166,6 +167,7 @@ public class SinglyLinkedList {
             return temp;
         }
 
+        // while coming back from the stack(function call) we are updating
         node.next = insertRec(val, index - 1, node.next);
         return node;
     }

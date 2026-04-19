@@ -203,6 +203,31 @@ public class CycleQuestions {
     }
 
 
+    // Palindrome LL
+    // https://leetcode.com/problems/palindrome-linked-list/
+    public boolean isPalindrome(ListNode head) {
+        ListNode mid = middleNode(head);
+        ListNode secondHead = reverseInplace(mid);
+        ListNode rereverseHead = secondHead;
+
+        // compare both the halves
+        while (head != null && secondHead != null) {
+            if (head.val != secondHead.val) {
+                break;
+            }
+            head = head.next;
+            secondHead = secondHead.next;
+        }
+        reverseInplace(rereverseHead);
+
+        // if you are able to traverse the entire list without breaking then it's palindrome
+        if (head == null || secondHead == null) {
+            return true;
+        }
+        return false;
+    }
+
+
     class ListNode {
         int val;
         ListNode next;

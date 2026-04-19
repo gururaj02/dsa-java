@@ -47,12 +47,21 @@ public class Main {
 //        ans.display();
 
         // Q-4
+//        SinglyLinkedList list = new SinglyLinkedList();
+//        for(int i = 5; i > 0; i--) {
+//            list.insertLast(i);
+//        }
+//        list.display();
+//        list.bubbleSort();
+//        list.display();
+
+        // Q-6
         SinglyLinkedList list = new SinglyLinkedList();
-        for(int i = 5; i > 0; i--) {
+        for(int i = 0; i < 7; i++) {
             list.insertLast(i);
         }
         list.display();
-        list.bubbleSort();
+        list.reverseInplace();
         list.display();
 
     }

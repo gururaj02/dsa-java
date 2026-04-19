@@ -226,7 +226,7 @@ public class SinglyLinkedList {
     }
 
 
-    // Bubble Sort
+    // Q4 : Bubble Sort
     public void bubbleSort() {
         bubbleSort(size - 1, 0);
     }
@@ -267,4 +267,44 @@ public class SinglyLinkedList {
             bubbleSort(row - 1, 0);
         }
     }
+
+
+    // Q5 : Reverse LL using Recursion
+    // https://leetcode.com/problems/reverse-linked-list/description/
+     void reverse(Node node) {
+        if(node == tail) {
+            head = tail;
+            return;
+        }
+
+        reverse(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
+
+    // Q6 : Inplace reversal of LL
+    // https://leetcode.com/problems/reverse-linked-list/description/
+    public void reverseInplace() {
+        if (size < 2) {
+            return;
+        }
+
+        Node prev = null;
+        Node present = head;
+        Node next = present.next;
+
+        while (present != null) {
+            present.next = prev;
+            prev = present;
+            present = next;
+
+            if(next != null) {
+                next = next.next;
+            }
+        }
+        head = prev;
+    }
+
 }

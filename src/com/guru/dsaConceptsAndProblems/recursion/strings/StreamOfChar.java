@@ -7,6 +7,8 @@ public class StreamOfChar {
         skip("", "baccdah");
 
         System.out.println(skip("baccdah"));
+
+        System.out.println(skipApple("bacapplecdah"));
     }
 
     public static void skip(String processed, String unprocessed) {
@@ -38,6 +40,21 @@ public class StreamOfChar {
             return skip(unprocessed.substring(1));
         } else {
             return ch + skip(unprocessed.substring(1));
+        }
+    }
+
+
+    // Skip a word
+    public static String skipApple(String unprocessed) {
+
+        if(unprocessed.isEmpty()) {
+            return "";
+        }
+
+        if(unprocessed.startsWith("apple")) {
+            return skipApple(unprocessed.substring(5));
+        } else {
+            return unprocessed.charAt(0) + skipApple(unprocessed.substring(1));
         }
     }
 }

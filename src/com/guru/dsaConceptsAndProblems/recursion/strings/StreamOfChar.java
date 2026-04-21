@@ -9,6 +9,8 @@ public class StreamOfChar {
         System.out.println(skip("baccdah"));
 
         System.out.println(skipApple("bacapplecdah"));
+
+        System.out.println(skipAppNotApple("bacapplecdah"));
     }
 
     public static void skip(String processed, String unprocessed) {
@@ -55,6 +57,21 @@ public class StreamOfChar {
             return skipApple(unprocessed.substring(5));
         } else {
             return unprocessed.charAt(0) + skipApple(unprocessed.substring(1));
+        }
+    }
+
+
+    // Skip "app" not "apple"
+    public static String skipAppNotApple(String unprocessed) {
+
+        if(unprocessed.isEmpty()) {
+            return "";
+        }
+
+        if(unprocessed.startsWith("app") && !unprocessed.startsWith("apple")) {
+            return skipAppNotApple(unprocessed.substring(3));
+        } else {
+            return unprocessed.charAt(0) + skipAppNotApple(unprocessed.substring(1));
         }
     }
 }

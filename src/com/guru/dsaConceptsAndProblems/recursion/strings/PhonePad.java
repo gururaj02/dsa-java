@@ -11,6 +11,8 @@ public class PhonePad {
         pad("", "12");
 
         System.out.println(padReturn("", "12"));
+
+        System.out.println(padCount("", "12"));
     }
 
     public static void pad(String processed, String unprocessed) {
@@ -46,5 +48,22 @@ public class PhonePad {
         }
 
         return list;
+    }
+
+    // returning count
+    public static int padCount(String processed, String unprocessed) {
+        if (unprocessed.isEmpty()) {
+            System.out.println(processed);
+            return 1;
+        }
+
+        int count = 0;
+        int digit = unprocessed.charAt(0) - '0'; // this will convert '2' into 2 (50 - 48 = 2)
+        for (int i = (digit - 1) * 3; i < digit * 3; i++) {
+            char ch = (char)('a' + i);
+            count = count + padCount(processed + ch, unprocessed.substring(1));
+        }
+
+        return count;
     }
 }

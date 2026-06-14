@@ -14,6 +14,7 @@ public class Dice {
         System.out.println(diceFaceRet("", 4, 8));
     }
 
+    // Dice having 6 face
     public static void dice(String processed, int target) {
         if(target == 0){
             System.out.println(processed);

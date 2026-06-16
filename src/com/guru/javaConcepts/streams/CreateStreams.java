@@ -1,6 +1,7 @@
 package com.guru.javaConcepts.streams;
 
 import java.util.List;
+import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
 public class CreateStreams {
@@ -17,5 +18,12 @@ public class CreateStreams {
         // 2. Array -> Stream
         Stream<String> stream = Stream.of(arr);
         stream.forEach(name -> System.out.println(name));
+        
+        // 3. Stream of
+        Stream<Integer> integerStream = Stream.of(1, 2, 3);
+
+        // 4. Generate stream
+        Stream<Double> limit = Stream.generate(() -> Math.random()).limit(5);
+        // Stream<Double> limit = Stream.generate(Math::random).limit(5);
     }
 }

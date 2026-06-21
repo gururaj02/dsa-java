@@ -15,6 +15,6 @@ public class SumExample {
                 // .mapToInt(n -> n.intValue())
                 .sum();
 
-        System.out.println("Sum: " + sum);
+        System.out.println("Sum : " + sum);
     }
 }

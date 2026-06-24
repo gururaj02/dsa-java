@@ -31,7 +31,6 @@ public class FactorialParallelAndSequentialStreams {
         System.out.println("Time taken by parallel stream: " + (endTime - startTime) + "ms");
     }
 
-
     // Method to calculate factorial of a number
     public static long factorial(long number) {
         return LongStream.rangeClosed(1, number)

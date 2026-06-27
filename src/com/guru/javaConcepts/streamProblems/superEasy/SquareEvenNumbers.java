@@ -1,8 +1,7 @@
-package com.guru.javaConcepts.streamProblems;
+package com.guru.javaConcepts.streamProblems.superEasy;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class SquareEvenNumbers {
     public static void main(String[] args) {

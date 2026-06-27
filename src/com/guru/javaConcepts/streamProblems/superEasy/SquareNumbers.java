@@ -1,4 +1,4 @@
-package com.guru.javaConcepts.streamProblems;
+package com.guru.javaConcepts.streamProblems.superEasy;
 
 import java.util.Arrays;
 import java.util.List;

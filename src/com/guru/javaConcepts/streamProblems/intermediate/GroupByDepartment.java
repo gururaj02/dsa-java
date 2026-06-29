@@ -18,7 +18,6 @@ public class GroupByDepartment {
         );
 
         // group employees by department and calculate avg salary
-
         Map<String, Double> output = employees.stream()
                 .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
 

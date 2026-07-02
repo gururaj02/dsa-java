@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class CountOccurrences {
     public static void main(String[] args) {
-        List<String> items = Arrays.asList("apple", "banana", "apple", "orange", "banana", "apple");
+        List<String> items = Arrays.asList("apple", "banana", "apple", "orange", "banana", "apple", "apple");
 
         Map<String, Long> output = items.stream()
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));

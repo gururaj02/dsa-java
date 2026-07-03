@@ -31,10 +31,10 @@ public class Employee {
         return salary;
     }
 
-    // toSting
+    // toString
     @Override
     public String toString() {
-        return "Employee{" +
+        return "{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", department='" + department + '\'' +

@@ -1,6 +1,7 @@
 package com.guru.javaConcepts.streamProblems.easy;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class NumberDivisibleBy {
@@ -10,6 +11,6 @@ public class NumberDivisibleBy {
         boolean match = numbers.stream()
                 .anyMatch(number -> number % 3 == 0);
 
-        System.out.println("Is there any number divisible by 3? " + match);
+        System.out.println("Is there any number divisible by 3? - " + match);
     }
 }

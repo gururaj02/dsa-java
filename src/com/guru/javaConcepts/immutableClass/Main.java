@@ -11,6 +11,7 @@ public class Main {
         LocalDate localDate = LocalDate.of(2003, Month.FEBRUARY, 2);
         Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
+        // Here DOB is type of Date
         ImmutableUser user = new ImmutableUser("Guru", date);
 
         System.out.println("Username: " + user.getUsername());

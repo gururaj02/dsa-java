@@ -14,6 +14,7 @@ public class RunnableAndCallable {
         Callable<Integer> callableTask = () -> {
             return 10 + 20;
         };
+        
         FutureTask<Integer> futureTask = new FutureTask<>(callableTask);
         Thread thread2 = new Thread(futureTask, "thread2");
         thread2.start();

@@ -7,6 +7,9 @@ public class MultiThreadingExample {
         ExecutorService executor =
                 Executors.newFixedThreadPool(2); // 1 - result will delay little
 
+        // newCachedThreadPool();
+        // newSingleThreadExecutor();
+
         Callable<Integer> task1 = () -> {
             Thread.sleep(2000);
             return 10;

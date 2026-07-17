@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 public class MultiThreadingExample {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executor =
-                Executors.newFixedThreadPool(2); // 1 - result will delayed little
+                Executors.newFixedThreadPool(2); // 1 - result will delay little
 
         Callable<Integer> task1 = () -> {
             Thread.sleep(2000);

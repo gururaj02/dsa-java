@@ -8,7 +8,7 @@ public class RunnableAndCallable {
         Runnable task = () -> {
             System.out.println(10 + 20);
         };
-        Thread thread1 = new Thread(task, "thread1");
+        Thread thread1 = new Thread(task, "thread-1");
         thread1.start();
 
         Callable<Integer> callableTask = () -> {
@@ -16,7 +16,7 @@ public class RunnableAndCallable {
         };
         
         FutureTask<Integer> futureTask = new FutureTask<>(callableTask);
-        Thread thread2 = new Thread(futureTask, "thread2");
+        Thread thread2 = new Thread(futureTask, "thread-2");
         thread2.start();
         try {
             Integer result = futureTask.get();

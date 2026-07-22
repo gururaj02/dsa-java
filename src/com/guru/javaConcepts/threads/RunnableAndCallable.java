@@ -16,6 +16,7 @@ public class RunnableAndCallable {
         };
         
         FutureTask<Integer> futureTask = new FutureTask<>(callableTask);
+
         Thread thread2 = new Thread(futureTask, "thread-2");
         thread2.start();
         try {

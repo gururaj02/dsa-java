@@ -12,7 +12,7 @@ public class RunnableAndCallable {
         thread1.start();
 
         Callable<Integer> callableTask = () -> {
-            return 10 + 20;
+            return 20 + 30;
         };
         
         FutureTask<Integer> futureTask = new FutureTask<>(callableTask);

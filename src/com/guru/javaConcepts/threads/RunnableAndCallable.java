@@ -21,7 +21,7 @@ public class RunnableAndCallable {
         thread2.start();
         try {
             Integer result = futureTask.get();
-            System.out.println("Result from callable task: " + result);
+            System.out.println("Result from Callable task: " + result);
         } catch (Exception e) {
             e.printStackTrace();
         }

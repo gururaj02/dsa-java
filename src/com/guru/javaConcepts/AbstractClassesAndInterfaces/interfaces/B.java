@@ -1,5 +1,10 @@
 package com.guru.javaConcepts.AbstractClassesAndInterfaces.interfaces;
 
+/**
+ * Java 8 -> static and default methods
+ * Java 9 -> private methods
+ */
+
 public interface B {
     default void showDefault() {
         log();

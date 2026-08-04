@@ -1,8 +1,8 @@
 package com.guru.javaConcepts.AbstractClassesAndInterfaces.interfaces;
 
 /**
- * Java 8 -> static and default methods
- * Java 9 -> private methods
+ * Java 8 -> introduced static and default methods
+ * Java 9 -> introduced private methods
  */
 
 public interface B {

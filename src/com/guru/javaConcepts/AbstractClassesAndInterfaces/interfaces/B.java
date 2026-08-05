@@ -21,6 +21,6 @@ public interface B {
     }
 
     private void log() {
-        System.out.println("Logging from B");
+        System.out.println("Logging from B (From private method)");
     }
 }

@@ -6,6 +6,7 @@ public class Main {
         Vehicle clientCar1 = VehicleRegistry.getVehicle("BASIC_SEDAN");
         // Customize the clone independently
         clientCar1.addFeature("Heated Seats");
+        clientCar1.addFeature("Sunroof");
 
         // Fetch another separate clone of the same basic sedan profile
         Vehicle clientCar2 = VehicleRegistry.getVehicle("BASIC_SEDAN");

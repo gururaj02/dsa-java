@@ -7,7 +7,7 @@ public class ApplicationProxy {
 
         // First Query execution (Cache Miss - Slow performance)
         System.out.println(db.executeQuery("SELECT * FROM products WHERE category = 'electronics'"));
-        System.out.println("--------------------------------------------------");
+        System.out.println("---------------------------------------------------");
 
         // Second Query execution (Cache Hit - Instantaneous performance)
         System.out.println(db.executeQuery("SELECT * FROM products WHERE category = 'electronics'"));
